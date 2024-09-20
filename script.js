@@ -53,11 +53,17 @@ const nextButton = document.querySelector('.next');
 let index = 0;
 
 nextButton.addEventListener('click', () => {
-  index = (index + 1) % slides.children.length;
-  slides.style.transform = `translateX(-${index * 100}%)`;
+    index++;
+    if (index >= slides.children.length) {
+        index = 0; // Reset to first item
+    }
+    slides.style.transform = `translateX(-${index * 100}%)`;
 });
 
 prevButton.addEventListener('click', () => {
-  index = (index - 1 + slides.children.length) % slides.children.length;
-  slides.style.transform = `translateX(-${index * 100}%)`;
+    index--;
+    if (index < 0) {
+        index = slides.children.length - 1; // Go to last item
+    }
+    slides.style.transform = `translateX(-${index * 100}%)`;
 });
