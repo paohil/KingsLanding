@@ -172,6 +172,7 @@ header {
 
 .top-videos, .latest-videos, .upcoming-videos{
     padding: 50px;
+    width: 100%;
 }
 
 .top-videos{
@@ -212,9 +213,9 @@ header {
 
 /* Video Grid */
 .video-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .video-card {
@@ -222,8 +223,6 @@ header {
     border: 0.15rem solid #222;
     border-radius: 0.5rem;
     margin: 1rem;
-    width: 48%; /* For two cards side by side */
-    position: relative;
     overflow: hidden;
 }
 
@@ -463,75 +462,121 @@ footer {
     padding-top: 10px;
 }
 
+/* For laptops and tablets */
+@media (max-width: 992px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .auth-links a {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        padding-bottom: 2rem;
+    }
+    .video-card {
+        width: 48%; /* Two cards per row */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .cta-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .auth-links a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content {
+        padding-bottom: 1.5rem;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links */
+    }
+
+    .hamburger-menu {
+        cursor: pointer;
+        display: block;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    .mobile-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+    }
+
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-nav ul li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .mobile-nav ul li a {
+        font-size: 1.5rem;
+        color: red;
+        text-decoration: none;
+    }
+
+    .mobile-nav.active {
+        display: block;
+    }
+}
+
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
         align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo-section, .about-section {
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .footer-links {
         flex-direction: column;
         align-items: center;
-    }
-
-    .divider {
-        display: none; /* Hide dividers on mobile */
-    }
-
-    .logo-section, .about-section {
-        text-align: center;
+        margin-bottom: 20px;
     }
 
     .footer-bottom {
         padding: 10px 0;
-    }
-}
-
-
-
-/* Responsive Styling */
-
-/* Medium Screens (Tablets, small laptops) */
-@media (max-width: 992px) {
-    .video-card {
-        width: 48%;
-    }
-    .cta-btn {
-        font-size: 1.2rem;
-    }
-    .slide {
-        min-width: 50%; /* Show two slides at a time */
-    }
-}
-
-/* Small Screens (Phones) */
-@media (max-width: 768px) {
-    .hero {
-        height: 60vh;
-    }
-    .cta-btn {
-        font-size: 1rem;
-    }
-    .welcome-text h2 {
-        font-size: 1.5rem;
-    }
-    .welcome-text h1 {
-        font-size: 2rem;
-    }
-    .video-card {
-        width: 100%;
-    }
-}
-
-/* Extra Small Screens (Very small phones) */
-@media (max-width: 480px) {
-    .hero {
-        height: 40vh;
-    }
-    .cta-btn {
-        font-size: 0.8rem;
-    }
-    .welcome-text h1 {
-        font-size: 1.5rem;
     }
 }
