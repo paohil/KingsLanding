@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: #fff;
+}
+
+/* Header Styling */
+header {
+    background-color: #000;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #f00;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: 1.5rem;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+/* Navigation Links */
+.nav-links a {
+    color: red; /* Default red for inactive links */
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem; /* Space for the underline */
+    border-bottom: 2px solid transparent; /* No underline by default */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions */
+}
+
+/* When on the active page */
+.nav-links a.active {
+    color: #fff; /* White when active */
+    border-bottom: 2px solid #ffd700; /* Yellow underline */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.auth-links a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Login Button */
+.login {
+    color: #fff;
+    border: 2px solid #f00; /* Red border for the login button */
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+}
+
+.join-now {
+    background-color: #f00;
+    color: #fff;
+    border-radius: 0.3rem;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+.social-icons a img {
+    filter: invert(100%);
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('./images/HERO.webp') no-repeat center center/cover;
+    background-attachment: fixed; /* Image is fixed even when zooming */
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 3rem; /* Lower the CTA button */
+}
+
+.cta-btn {
+    background-color: #ffd700;
+    border: none;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.5rem);
+    }
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.welcome-text h2 {
+    font-size: 2rem; /* Larger size for "Welcome To" */
+    color: #ffd700; /* Yellow for "Welcome To" */
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.welcome-text h1 {
+    font-size: 5rem; /* Larger size for "KingsLanding" */
+    margin-bottom: 2rem; /* Added spacing between "KingsLanding" and the paragraph */
+}
+
+.welcome-text h1 span {
+    color: #f00; /* Red for "Kings" */
+}
+
+.welcome-text p {
+    font-size: 1.5rem; /* Increased font size for the paragraph */
+    line-height: 1.8;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.top-videos, .latest-videos, .upcoming-videos{
+    padding: 50px;
+}
+
+.top-videos{
+    background-color: #141414;
+}
+
+/* Section Titles with Line on Right */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-title h2 {
+    font-size: 4rem;
+    text-align: left;
+    font-weight: 900;
+}
+
+.section-title h2 span {
+    font-weight: 200;
+}
+
+.section-title .yellow-line,
+.section-title .red-line {
+    flex: 1;
+    height: 0.3rem;
+    margin-left: 1.5rem;
+}
+
+.yellow-line {
+    background-color: #ffd700; /* Or red for specific sections */
+}
+
+.red-line {
+    background-color: #ff0000; /* Or red for specific sections */
+}
+
+/* Video Grid */
+.video-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.video-card {
+    background-color: #000;
+    border: 0.15rem solid #222;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    width: 48%; /* For two cards side by side */
+    position: relative;
+    overflow: hidden;
+}
+
+.video-card img {
+    width: 100%;
+    border-bottom: 0.2rem solid #f00; /* Red border for latest videos */
+    border-radius: 0.5rem 0.5rem 0 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-card img:hover {
+    transform: scale(1.05);
+}
+
+.video-info {
+    margin-top: 5px;
+    padding: 1rem;
+}
+
+.video-info h3 {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.video-info p {
+    color: #ffd700; /* Yellow for video info */
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.play-button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.play-button img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+/* CTA Button with Unlock Icon */
+/* CTA Button */
+.cta-btn {
+    background-image: linear-gradient(rgb(255, 251, 0), rgb(255, 145, 0));
+    border: none;
+    padding: 1.5rem 4rem; /* Made the button longer */
+    font-size: 2.5rem; /* Increased font size */
+    font-weight: 700; /* Bolder font weight */
+    cursor: pointer;
+    border-radius: 0.5rem;
+    display: inline-flex; /* Ensure lock icon and text are aligned horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: center;
+    gap: 1rem; /* Space between icon and text */
+}
+
+/* Lock Icon inside CTA */
+.lock-icon {
+    width: 1.8rem; /* Adjust size of the icon */
+    height: auto;
+}
+
+/* General CTA Button Style (excluding hero section) */
+.section-cta-btn {
+    background-image: linear-gradient(rgb(255, 251, 0), rgb(255, 145, 0));
+    border: none;
+    padding: 1.5rem 4rem; /* Standard padding */
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: 700; /* Bold text */
+    cursor: pointer;
+    border-radius: 0.5rem;
+    display: block; /* Ensure full-width alignment */
+    margin: 0 auto; /* Center the button horizontally */
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;;
+}
+
+/* General CTA Button Style (excluding hero section) */
+.section-view-cta-btn {
+    border: 2px solid red;
+    padding: 1rem 3rem; /* Standard padding */
+    font-size: 1.5rem; /* Adjust font size */
+    font-weight: 400; /* Bold text */
+    cursor: pointer;
+    display: block; /* Ensure full-width alignment */
+    margin: 0 auto; /* Center the button horizontally */
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;;
+    background-color: #000;
+    color: white;
+}
+
+
+
+/* Upcoming Videos Section */
+.upcoming-videos {
+    background-color: black;
+    padding: 2rem;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    max-width: 95%;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 50%; /* Display two slides at a time */
+    box-sizing: border-box;
+    padding: 0.5rem;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.prev {
+    left: 0.5rem;
+}
+
+.next {
+    right: 0.5rem;
+}
+
+
+.caption h3 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.caption p {
+    color: #ffd700; /* Yellow for video info */
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribute content evenly */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-bottom: 3px solid #3d3d3d;
+    padding-bottom: 20px;
+}
+
+.logo-section h1 {
+    font-size: 36px; /* Increased font size for KingsLanding */
+}
+
+.logo-section span {
+    color: red;
+}
+
+.footer-links {
+    display: flex;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.link-column a {
+    color: #ff0000;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.divider {
+    width: 1px;
+    background-color: #fff;
+    margin: 0 30px;
+    height: 100%; /* Vertically spans the content */
+}
+
+.about-section {
+    max-width: 300px;
+}
+
+.about-section h3 {
+    font-size: 18px;
+}
+
+.about-section p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divider {
+        display: none; /* Hide dividers on mobile */
+    }
+
+    .logo-section, .about-section {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        padding: 10px 0;
+    }
+}
+
+
+
+/* Responsive Styling */
+
+/* Medium Screens (Tablets, small laptops) */
+@media (max-width: 992px) {
+    .video-card {
+        width: 48%;
+    }
+    .cta-btn {
+        font-size: 1.2rem;
+    }
+    .slide {
+        min-width: 50%; /* Show two slides at a time */
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+    .cta-btn {
+        font-size: 1rem;
+    }
+    .welcome-text h2 {
+        font-size: 1.5rem;
+    }
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+    .video-card {
+        width: 100%;
+    }
+}
+
+/* Extra Small Screens (Very small phones) */
+@media (max-width: 480px) {
+    .hero {
+        height: 40vh;
+    }
+    .cta-btn {
+        font-size: 0.8rem;
+    }
+    .welcome-text h1 {
+        font-size: 1.5rem;
+    }
+}
