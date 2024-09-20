@@ -463,29 +463,6 @@ footer {
     padding-top: 10px;
 }
 
-/* For laptops and tablets */
-@media (max-width: 992px) {
-    body {
-        font-size: 1rem;
-    }
-
-    .cta-btn {
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
-    }
-
-    .auth-links a {
-        padding: 0.4rem 0.8rem;
-        font-size: 1rem;
-    }
-
-    .hero-content {
-        padding-bottom: 2rem;
-    }
-    .video-card {
-        width: 48%; /* Two cards per row */
-    }
-}
 
 /* For mobile screens */
 @media (max-width: 768px) {
@@ -506,78 +483,159 @@ footer {
     .hero-content {
         padding-bottom: 1.5rem;
     }
-}
 
-/* For mobile screens */
-@media (max-width: 768px) {
+    .video-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .video-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-info h3 {
+        font-size: 0.9rem; /* Reduced font size */
+    }
+
+    .video-info p {
+        font-size: 0.6rem; /* Reduced font size */
+    }
+
+    .section-cta-btn {
+        font-size: 1rem; /* Reduced font size */
+    }
+
+    .red-line, .yellow-line, .login, .join-now, .social-icons {
+        display: none;
+    }
+
+    /* Nav Links - Active on Mobile */
     .nav-links {
         display: none; /* Hide nav links */
     }
 
-    .hamburger-menu {
-        cursor: pointer;
-        display: block;
+    .mobile-nav ul li a.active {
+        color: #fff; /* White when active */
+        border-bottom: 2px solid #ffd700; /* Yellow underline */
     }
 
-    .hamburger-menu span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 5px 0;
-        transition: 0.4s;
-    }
-
-    .mobile-nav {
+    /* Hamburger Menu Fix */
+    .nav-links {
         display: none;
+        flex-direction: column;
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #000;
-    }
-
-    .mobile-nav ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .mobile-nav ul li {
-        padding: 15px;
-        text-align: center;
-    }
-
-    .mobile-nav ul li a {
-        font-size: 1.5rem;
-        color: red;
-        text-decoration: none;
-    }
-
-    .mobile-nav.active {
+        top: 60px;
+        right: 20px;
+        background-color: #000000;
+        padding: 20px;
+        border-radius: 10px;
+      }
+    
+      .nav-links.show {
+        display: flex;
+      }
+    
+      .hamburger-menu {
         display: block;
+      }
+
+    
+
+    /* Hero Section Fix */
+    .hero {
+        height: 50vh; /* Adjust height for mobile */
+        background-attachment: scroll; /* Disable parallax effect */
+        background-size: cover; /* Ensure the image covers the area */
     }
+
+  /* Image Full Width on Mobile */
+  .video-card img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio for images */
 }
 
+/* Play Button Shrinking on Mobile */
+.play-button {
+    width: 2rem;
+    height: 2rem;
+}
 
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 20px;
-    }
+/* Footer Alignment on Mobile */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+}
 
-    .logo-section, .about-section {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+/* Adjusting Text and Button Sizes */
+.cta-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+}
 
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+.welcome-text h1 {
+    font-size: 3rem; /* Reduce the font size for mobile */
+}
 
-    .footer-bottom {
-        padding: 10px 0;
-    }
+.welcome-text p {
+    font-size: 1rem; /* Smaller paragraph text */
+}
+
+.section-title h2 {
+    font-size: 2.5rem; /* Smaller section title */
+}
+
+.video-info h3 {
+    font-size: 1.2rem; /* Smaller video titles */
+}
+
+.auth-links a {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+}
+
+.hero-content {
+    padding-bottom: 1.5rem;
+}
+
+.video-grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.slide {
+    min-width: 100%; /* Show one slide */
+}
+
+.slide img {
+    width: 100%; /* Make the image fill the slide */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.caption h3 {
+    font-size: 1.5rem; /* Smaller font size for title */
+}
+
+.caption p {
+    font-size: 0.9rem; /* Smaller font size for description */
+}
+
+.footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-section, .about-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-bottom {
+    padding: 10px 0;
+}
 }
