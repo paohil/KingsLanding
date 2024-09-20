@@ -67,3 +67,13 @@ prevButton.addEventListener('click', () => {
     }
     slides.style.transform = `translateX(-${index * 100}%)`;
 });
+
+
+const links = document.querySelectorAll('.nav-links a');
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        links.forEach(nav => nav.classList.remove('active')); // Remove active class from all links
+        link.classList.add('active'); // Add active class to the clicked link
+    });
+});
