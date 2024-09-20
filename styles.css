@@ -10,7 +10,7 @@ body {
     color: #fff;
 }
 
-/* Header Styling */
+
 header {
     background-color: #000;
     padding: 3rem;
@@ -45,20 +45,20 @@ header {
     margin-left: 1rem;
 }
 
-/* Navigation Links */
+
 .nav-links a {
-    color: red; /* Default red for inactive links */
+    color: red;
     text-decoration: none;
     font-size: 1.2rem;
-    padding-bottom: 0.5rem; /* Space for the underline */
-    border-bottom: 2px solid transparent; /* No underline by default */
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions */
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-/* When on the active page */
+
 .nav-links a.active {
-    color: #fff; /* White when active */
-    border-bottom: 2px solid #ffd700; /* Yellow underline */
+    color: #fff;
+    border-bottom: 2px solid #ffd700;
 }
 
 .header-right {
@@ -73,10 +73,10 @@ header {
     padding: 0.5rem 1rem;
 }
 
-/* Login Button */
+
 .login {
     color: #fff;
-    border: 2px solid #f00; /* Red border for the login button */
+    border: 2px solid #f00;
     padding: 0.5rem 1rem;
     border-radius: 0.3rem;
 }
@@ -100,11 +100,11 @@ header {
     margin-left: 1rem;
 }
 
-/* Hero Section */
+
 .hero {
     position: relative;
     background: url('./images/HERO.webp') no-repeat center center/cover;
-    background-attachment: fixed; /* Image is fixed even when zooming */
+    background-attachment: fixed;
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -114,7 +114,7 @@ header {
 .hero-content {
     text-align: center;
     color: #fff;
-    padding-bottom: 3rem; /* Lower the CTA button */
+    padding-bottom: 3rem;
 }
 
 .cta-btn {
@@ -136,7 +136,7 @@ header {
     }
 }
 
-/* Welcome Section */
+
 .welcome {
     text-align: center;
     padding: 4rem 1.5rem;
@@ -145,23 +145,23 @@ header {
 }
 
 .welcome-text h2 {
-    font-size: 2rem; /* Larger size for "Welcome To" */
-    color: #ffd700; /* Yellow for "Welcome To" */
+    font-size: 2rem;
+    color: #ffd700;
     margin-bottom: 0.5rem;
     font-weight: 300;
 }
 
 .welcome-text h1 {
-    font-size: 5rem; /* Larger size for "KingsLanding" */
-    margin-bottom: 2rem; /* Added spacing between "KingsLanding" and the paragraph */
+    font-size: 5rem;
+    margin-bottom: 2rem;
 }
 
 .welcome-text h1 span {
-    color: #f00; /* Red for "Kings" */
+    color: #f00;
 }
 
 .welcome-text p {
-    font-size: 1.5rem; /* Increased font size for the paragraph */
+    font-size: 1.5rem;
     line-height: 1.8;
     max-width: 80%;
     margin-left: auto;
@@ -179,7 +179,7 @@ header {
     background-color: #141414;
 }
 
-/* Section Titles with Line on Right */
+
 .section-title {
     display: flex;
     align-items: center;
@@ -204,14 +204,14 @@ header {
 }
 
 .yellow-line {
-    background-color: #ffd700; /* Or red for specific sections */
+    background-color: #ffd700;
 }
 
 .red-line {
-    background-color: #ff0000; /* Or red for specific sections */
+    background-color: #ff0000;
 }
 
-/* Video Grid */
+
 .video-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -229,7 +229,7 @@ header {
 
 .video-card img {
     width: 100%;
-    border-bottom: 0.2rem solid #f00; /* Red border for latest videos */
+    border-bottom: 0.2rem solid #f00;
     border-radius: 0.5rem 0.5rem 0 0;
     transition: transform 0.3s ease-in-out;
 }
@@ -249,7 +249,7 @@ header {
 }
 
 .video-info p {
-    color: #ffd700; /* Yellow for video info */
+    color: #ffd700;
     font-size: 1rem;
     margin-top: 0.5rem;
 }
@@ -265,53 +265,53 @@ header {
     height: 3.5rem;
 }
 
-/* CTA Button with Unlock Icon */
-/* CTA Button */
+
+
 .cta-btn {
     background-image: linear-gradient(rgb(255, 251, 0), rgb(255, 145, 0));
     border: none;
-    padding: 1.5rem 4rem; /* Made the button longer */
-    font-size: 2.5rem; /* Increased font size */
-    font-weight: 700; /* Bolder font weight */
+    padding: 1.5rem 4rem;
+    font-size: 2.5rem;
+    font-weight: 700;
     cursor: pointer;
     border-radius: 0.5rem;
-    display: inline-flex; /* Ensure lock icon and text are aligned horizontally */
-    align-items: center; /* Center vertically */
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    gap: 1rem; /* Space between icon and text */
+    gap: 1rem;
 }
 
-/* Lock Icon inside CTA */
+
 .lock-icon {
-    width: 1.8rem; /* Adjust size of the icon */
+    width: 1.8rem;
     height: auto;
 }
 
-/* General CTA Button Style (excluding hero section) */
+
 .section-cta-btn {
     background-image: linear-gradient(rgb(255, 251, 0), rgb(255, 145, 0));
     border: none;
-    padding: 1.5rem 4rem; /* Standard padding */
-    font-size: 2.5rem; /* Adjust font size */
-    font-weight: 700; /* Bold text */
+    padding: 1.5rem 4rem;
+    font-size: 2.5rem;
+    font-weight: 700;
     cursor: pointer;
     border-radius: 0.5rem;
-    display: block; /* Ensure full-width alignment */
-    margin: 0 auto; /* Center the button horizontally */
+    display: block;
+    margin: 0 auto;
     text-align: center;
     margin-top: 4rem;
     margin-bottom: 4rem;;
 }
 
-/* General CTA Button Style (excluding hero section) */
+
 .section-view-cta-btn {
     border: 2px solid red;
-    padding: 1rem 3rem; /* Standard padding */
-    font-size: 1.5rem; /* Adjust font size */
-    font-weight: 400; /* Bold text */
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 400;
     cursor: pointer;
-    display: block; /* Ensure full-width alignment */
-    margin: 0 auto; /* Center the button horizontally */
+    display: block;
+    margin: 0 auto;
     text-align: center;
     margin-top: 4rem;
     margin-bottom: 4rem;;
@@ -321,7 +321,7 @@ header {
 
 
 
-/* Upcoming Videos Section */
+
 .upcoming-videos {
     background-color: black;
     padding: 2rem;
@@ -342,7 +342,7 @@ header {
 }
 
 .slide {
-    min-width: 50%; /* Display two slides at a time */
+    min-width: 50%;
     box-sizing: border-box;
     padding: 0.5rem;
     position: relative;
@@ -387,7 +387,7 @@ header {
 }
 
 .caption p {
-    color: #ffd700; /* Yellow for video info */
+    color: #ffd700;
     font-size: 1rem;
     margin-top: 0.5rem;
 }
@@ -403,7 +403,7 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-between; /* Distribute content evenly */
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     border-bottom: 3px solid #3d3d3d;
@@ -411,7 +411,7 @@ footer {
 }
 
 .logo-section h1 {
-    font-size: 36px; /* Increased font size for KingsLanding */
+    font-size: 36px;
 }
 
 .logo-section span {
@@ -439,7 +439,7 @@ footer {
     width: 1px;
     background-color: #fff;
     margin: 0 30px;
-    height: 100%; /* Vertically spans the content */
+    height: 100%;
 }
 
 .about-section {
@@ -464,7 +464,7 @@ footer {
 }
 
 
-/* For mobile screens */
+
 @media (max-width: 768px) {
     body {
         font-size: 0.9rem;
@@ -494,32 +494,35 @@ footer {
     }
 
     .video-info h3 {
-        font-size: 0.9rem; /* Reduced font size */
+        font-size: 0.9rem;
     }
 
     .video-info p {
-        font-size: 0.6rem; /* Reduced font size */
+        font-size: 0.6rem;
     }
 
-    .section-cta-btn {
-        font-size: 1rem; /* Reduced font size */
-    }
+
+    .section-view-cta-btn, .section-cta-btn {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+
+    } 
 
     .red-line, .yellow-line, .login, .join-now, .social-icons {
         display: none;
     }
 
-    /* Nav Links - Active on Mobile */
+   
     .nav-links {
-        display: none; /* Hide nav links */
+        display: none;
     }
 
     .mobile-nav ul li a.active {
-        color: #fff; /* White when active */
-        border-bottom: 2px solid #ffd700; /* Yellow underline */
+        color: #fff;
+        border-bottom: 2px solid #ffd700;
     }
 
-    /* Hamburger Menu Fix */
+   
     .nav-links {
         display: none;
         flex-direction: column;
@@ -541,51 +544,51 @@ footer {
 
     
 
-    /* Hero Section Fix */
+   
     .hero {
-        height: 50vh; /* Adjust height for mobile */
-        background-attachment: scroll; /* Disable parallax effect */
-        background-size: cover; /* Ensure the image covers the area */
+        height: 50vh;
+        background-attachment: scroll;
+        background-size: cover;
     }
 
-  /* Image Full Width on Mobile */
+ 
   .video-card img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio for images */
+    height: auto;
 }
 
-/* Play Button Shrinking on Mobile */
+
 .play-button {
     width: 2rem;
     height: 2rem;
 }
 
-/* Footer Alignment on Mobile */
+
 footer {
     text-align: center;
     padding: 2rem 1rem;
 }
 
-/* Adjusting Text and Button Sizes */
+
 .cta-btn {
     padding: 1rem 1.5rem;
     font-size: 1rem;
 }
 
 .welcome-text h1 {
-    font-size: 3rem; /* Reduce the font size for mobile */
+    font-size: 3rem;
 }
 
 .welcome-text p {
-    font-size: 1rem; /* Smaller paragraph text */
+    font-size: 1rem;
 }
 
 .section-title h2 {
-    font-size: 2.5rem; /* Smaller section title */
+    font-size: 2.5rem;
 }
 
 .video-info h3 {
-    font-size: 1.2rem; /* Smaller video titles */
+    font-size: 1.2rem;
 }
 
 .auth-links a {
@@ -602,20 +605,20 @@ footer {
 }
 
 .slide {
-    min-width: 100%; /* Show one slide */
+    min-width: 100%;
 }
 
 .slide img {
-    width: 100%; /* Make the image fill the slide */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
 .caption h3 {
-    font-size: 1.5rem; /* Smaller font size for title */
+    font-size: 1.5rem;
 }
 
 .caption p {
-    font-size: 0.9rem; /* Smaller font size for description */
+    font-size: 0.9rem;
 }
 
 .footer-container {
