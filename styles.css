@@ -223,6 +223,7 @@ header {
     border: 0.15rem solid #222;
     border-radius: 0.5rem;
     margin: 1rem;
+    position: relative;
     overflow: hidden;
 }
 
